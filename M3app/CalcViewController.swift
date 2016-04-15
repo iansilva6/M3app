@@ -39,7 +39,7 @@ class CalcViewController: UIViewController {
             numerTextField.text = nil //Seta a text field como null
     }
     
-    
+    //Botao de resultado
     @IBAction func resultadoButton(sender: AnyObject) {
         let media = calcularMedia(totaldoconjunto, tamanhodovetor: tamanhodovetor)
         mediaLabel.text = String (media)
