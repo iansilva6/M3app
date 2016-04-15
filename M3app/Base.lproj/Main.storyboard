@@ -23,9 +23,6 @@
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="logom3.png" translatesAutoresizingMaskIntoConstraints="NO" id="RHr-nq-G3L">
-                                <rect key="frame" x="88" y="100" width="198" height="59"/>
-                            </imageView>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="justified" translatesAutoresizingMaskIntoConstraints="NO" id="SJo-iV-vTa">
                                 <rect key="frame" x="47" y="241" width="280" height="98"/>
                                 <string key="text">Digite cada número do conjunto nos campos a seguir, sempre digitar um valor clique no botão enter. Assim que terminar de inserir os valor aperta o botão resultados.</string>
@@ -49,6 +46,9 @@
                                     <segue destination="hy5-29-eKn" kind="show" identifier="enterApp" id="YhF-SM-HUj"/>
                                 </connections>
                             </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="logo.png" translatesAutoresizingMaskIntoConstraints="NO" id="RHr-nq-G3L">
+                                <rect key="frame" x="88" y="92" width="198" height="59"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="0.21443681050030527" blue="0.25911690428309875" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
@@ -70,7 +70,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="logom3.png" translatesAutoresizingMaskIntoConstraints="NO" id="4ww-ut-ZVG">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="logo.png" translatesAutoresizingMaskIntoConstraints="NO" id="4ww-ut-ZVG">
                                 <rect key="frame" x="88" y="44" width="198" height="59"/>
                             </imageView>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Ex: 2" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="oJB-DO-NaW">
@@ -180,13 +180,25 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gsb-MP-zEC">
-                                <rect key="frame" x="44" y="455" width="42" height="21"/>
+                                <rect key="frame" x="20" y="455" width="91" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Tq8-8w-NFq">
-                                <rect key="frame" x="288" y="455" width="42" height="21"/>
+                                <rect key="frame" x="264" y="455" width="91" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5KP-qP-MKf">
+                                <rect key="frame" x="142" y="516" width="91" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xsn-7w-HoG">
+                                <rect key="frame" x="20" y="517" width="91" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
@@ -196,8 +208,10 @@
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
+                        <outlet property="maximoLabel" destination="5KP-qP-MKf" id="6vB-rg-7sO"/>
                         <outlet property="mediaLabel" destination="gsb-MP-zEC" id="q5s-x2-tR8"/>
                         <outlet property="medianaLabel" destination="Tq8-8w-NFq" id="tu9-wx-5wf"/>
+                        <outlet property="minimoLabel" destination="xsn-7w-HoG" id="oug-aq-OW3"/>
                         <outlet property="numerTextField" destination="oJB-DO-NaW" id="pBu-7d-7YS"/>
                         <outlet property="quantidadeLabel" destination="E9n-Xe-Qwg" id="Ipk-Tq-zSf"/>
                     </connections>
@@ -208,6 +222,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="logom3.png" width="271" height="64"/>
+        <image name="logo.png" width="300" height="100"/>
     </resources>
 </document>

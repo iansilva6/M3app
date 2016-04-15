@@ -13,11 +13,13 @@ class CalcViewController: UIViewController {
     @IBOutlet var quantidadeLabel: UILabel!
     @IBOutlet var mediaLabel: UILabel!
     @IBOutlet var medianaLabel: UILabel!
+    @IBOutlet var maximoLabel: UILabel!
+    @IBOutlet var minimoLabel: UILabel!
     
     var array: [Float] = [] //Declara o array onde vai armazenar os dados
+    
     var i: Int = 0 //Contador
     var tamanhodovetor: Float = 0 //Declara o tamanho do vetor
-    
     var totaldoconjunto: Float = 0 //Declara a soma do conjunto
     
     @IBAction func addNumberButton(sender: AnyObject) {
@@ -48,6 +50,13 @@ class CalcViewController: UIViewController {
         mediana - 1
         let local = array[mediana]
         medianaLabel.text = String (local)
+        
+        let numeroMax = array.maxElement()!
+        maximoLabel.text = String (numeroMax)
+        
+        let numeroMin = array.minElement()!
+        minimoLabel.text = String (numeroMin)
+        
     }
     
     //Função que calcula a média
@@ -55,6 +64,7 @@ class CalcViewController: UIViewController {
         return totaldoconjunto/tamanhodovetor
     }
     
+    //Funcao que calcula a mediana
     func calcularMediana (tamanhodovetor: Float) -> Float {
         return tamanhodovetor/2
     }

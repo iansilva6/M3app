@@ -12,8 +12,8 @@
 		3C18C2FB1CBFFBB90087F260 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3C18C2F91CBFFBB90087F260 /* Main.storyboard */; };
 		3C18C2FD1CBFFBB90087F260 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3C18C2FC1CBFFBB90087F260 /* Assets.xcassets */; };
 		3C18C3001CBFFBB90087F260 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3C18C2FE1CBFFBB90087F260 /* LaunchScreen.storyboard */; };
-		3C18C30A1CC00EC00087F260 /* logom3.png in Resources */ = {isa = PBXBuildFile; fileRef = 3C18C3091CC00EC00087F260 /* logom3.png */; };
 		3C18C3101CC020F10087F260 /* CalcViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C18C30F1CC020F10087F260 /* CalcViewController.swift */; };
+		3C18C3121CC168430087F260 /* logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 3C18C3111CC168430087F260 /* logo.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,8 +24,8 @@
 		3C18C2FC1CBFFBB90087F260 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3C18C2FF1CBFFBB90087F260 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3C18C3011CBFFBB90087F260 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		3C18C3091CC00EC00087F260 /* logom3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = logom3.png; path = ../../../Desktop/logom3.png; sourceTree = "<group>"; };
 		3C18C30F1CC020F10087F260 /* CalcViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CalcViewController.swift; sourceTree = "<group>"; };
+		3C18C3111CC168430087F260 /* logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = logo.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,12 +60,12 @@
 			children = (
 				3C18C2F51CBFFBB90087F260 /* AppDelegate.swift */,
 				3C18C2F71CBFFBB90087F260 /* ViewController.swift */,
+				3C18C3111CC168430087F260 /* logo.png */,
 				3C18C30F1CC020F10087F260 /* CalcViewController.swift */,
 				3C18C2F91CBFFBB90087F260 /* Main.storyboard */,
 				3C18C2FC1CBFFBB90087F260 /* Assets.xcassets */,
 				3C18C2FE1CBFFBB90087F260 /* LaunchScreen.storyboard */,
 				3C18C3011CBFFBB90087F260 /* Info.plist */,
-				3C18C3091CC00EC00087F260 /* logom3.png */,
 			);
 			path = M3app;
 			sourceTree = "<group>";
@@ -128,8 +128,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3C18C3121CC168430087F260 /* logo.png in Resources */,
 				3C18C3001CBFFBB90087F260 /* LaunchScreen.storyboard in Resources */,
-				3C18C30A1CC00EC00087F260 /* logom3.png in Resources */,
 				3C18C2FD1CBFFBB90087F260 /* Assets.xcassets in Resources */,
 				3C18C2FB1CBFFBB90087F260 /* Main.storyboard in Resources */,
 			);
