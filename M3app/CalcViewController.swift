@@ -17,6 +17,8 @@ class CalcViewController: UIViewController {
     @IBOutlet var minimoLabel: UILabel!
     @IBOutlet var varianciaLabel: UILabel!
     @IBOutlet var piLabel: UILabel!
+    @IBOutlet var desvioLabel: UILabel!
+    @IBOutlet var modaLabel: UILabel!
     
     var array: [Float] = [] //Declara o array onde vai armazenar os dados
     
@@ -85,8 +87,20 @@ class CalcViewController: UIViewController {
             }
             j++
         }
-        
         piLabel.text = "\(par)/\(impar)"
+        
+        //Desvio Padrão
+        let desviopadrao = sqrt(variancia)
+        desvioLabel.text = String (desviopadrao)
+        
+        
+        //Moda
+        var frequency: [Float:Float] = [:]
+        for x in array {
+            frequency[x] = (frequency[x] ?? 0) + 1
+        }
+        let moda = frequency.sort { $0.1 > $1.1 }
+        modaLabel.text = String (moda)
     }
     
     //Função que calcula a média
