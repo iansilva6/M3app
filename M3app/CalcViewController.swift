@@ -15,10 +15,12 @@ class CalcViewController: UIViewController {
     @IBOutlet var medianaLabel: UILabel!
     @IBOutlet var maximoLabel: UILabel!
     @IBOutlet var minimoLabel: UILabel!
+    @IBOutlet var varianciaLabel: UILabel!
     
     var array: [Float] = [] //Declara o array onde vai armazenar os dados
     
     var i: Int = 0 //Contador
+    var j: Int = 0 //Contador
     var tamanhodovetor: Float = 0 //Declara o tamanho do vetor
     var totaldoconjunto: Float = 0 //Declara a soma do conjunto
     
@@ -32,7 +34,7 @@ class CalcViewController: UIViewController {
             tamanhodovetor = tamanhodovetor + 1 //Declara o tamanho do vetor
             quantidadeLabel.text = String (tamanhodovetor) //Seta o valor do tamanho na tela
         
-            print(array[i]) //texte imprime o array
+            //print(array[i]) //texte imprime o array
         
             i = i + 1 //Incremento no contador
         
@@ -57,6 +59,17 @@ class CalcViewController: UIViewController {
         let numeroMin = array.minElement()!
         minimoLabel.text = String (numeroMin)
         
+        var soma: Float = 0
+        var variancia: Float = 0
+        
+        while (j<array.count) {
+            print(array[j])
+            let potencia = (array[j] - media) * (array[j] - media)
+            soma = soma + potencia
+            j++
+        }
+        variancia = soma / tamanhodovetor
+        varianciaLabel.text = String (variancia)
     }
     
     //Função que calcula a média
@@ -68,9 +81,6 @@ class CalcViewController: UIViewController {
     func calcularMediana (tamanhodovetor: Float) -> Float {
         return tamanhodovetor/2
     }
-    
-    
-    
     
     
     override func viewDidLoad() {
