@@ -16,6 +16,7 @@ class CalcViewController: UIViewController {
     @IBOutlet var maximoLabel: UILabel!
     @IBOutlet var minimoLabel: UILabel!
     @IBOutlet var varianciaLabel: UILabel!
+    @IBOutlet var piLabel: UILabel!
     
     var array: [Float] = [] //Declara o array onde vai armazenar os dados
     
@@ -62,14 +63,30 @@ class CalcViewController: UIViewController {
         var soma: Float = 0
         var variancia: Float = 0
         
+        //Variancia
         while (j<array.count) {
-            print(array[j])
             let potencia = (array[j] - media) * (array[j] - media)
             soma = soma + potencia
             j++
         }
         variancia = soma / tamanhodovetor
         varianciaLabel.text = String (variancia)
+        
+        j=0
+        
+        //Par ou impar
+        var par = 0
+        var impar = 0
+        while (j<array.count){
+            if (array[j] % 2 == 0){
+                par = par + 1
+            } else {
+                impar = impar + 1
+            }
+            j++
+        }
+        
+        piLabel.text = "\(par)/\(impar)"
     }
     
     //Função que calcula a média

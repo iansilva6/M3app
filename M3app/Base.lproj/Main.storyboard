@@ -201,6 +201,12 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rbV-ua-V78">
+                                <rect key="frame" x="146" y="584" width="87" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="P/I" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vnz-dR-3qS">
                                 <rect key="frame" x="143" y="555" width="91" height="21"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
@@ -218,6 +224,7 @@
                         <outlet property="medianaLabel" destination="Tq8-8w-NFq" id="tu9-wx-5wf"/>
                         <outlet property="minimoLabel" destination="xsn-7w-HoG" id="oug-aq-OW3"/>
                         <outlet property="numerTextField" destination="oJB-DO-NaW" id="pBu-7d-7YS"/>
+                        <outlet property="piLabel" destination="rbV-ua-V78" id="eYG-jI-dFP"/>
                         <outlet property="quantidadeLabel" destination="E9n-Xe-Qwg" id="Ipk-Tq-zSf"/>
                         <outlet property="varianciaLabel" destination="DeW-iJ-G3J" id="vUN-ag-Reh"/>
                     </connections>
