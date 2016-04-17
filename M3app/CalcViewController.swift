@@ -48,69 +48,70 @@ class CalcViewController: UIViewController {
     
     //Botao de resultado
     @IBAction func resultadoButton(sender: AnyObject) {
-        let media = calcularMedia(totaldoconjunto, tamanhodovetor: tamanhodovetor)
-        mediaLabel.text = String (media)
+        let media = calcularMedia(totaldoconjunto, tamanhodovetor: tamanhodovetor)//Chamando a função da media
+        mediaLabel.text = String (media) //Media aparece no app
         
-        let mediana = Int (tamanhodovetor/2)
+        let mediana = Int (tamanhodovetor/2) //Declada a mediana
         mediana - 1
-        let local = array[mediana]
-        medianaLabel.text = String (local)
+        let local = array[mediana] //Pega o valor da mediana
+        medianaLabel.text = String (local) //Mediana aparece no app
         
-        let numeroMax = array.maxElement()!
-        maximoLabel.text = String (numeroMax)
+        let numeroMax = array.maxElement()! //Pega o valor maximo
+        maximoLabel.text = String (numeroMax) //Numero maximo aparece no app
         
-        let numeroMin = array.minElement()!
-        minimoLabel.text = String (numeroMin)
+        let numeroMin = array.minElement()! //Pega o valor minimo
+        minimoLabel.text = String (numeroMin) //Numero minimo aparece no app
         
-        var soma: Float = 0
-        var variancia: Float = 0
+        var soma: Float = 0 //Declara variavel para incrementar variancia
+        var variancia: Float = 0 //Declara variavel para incrementar variancia
         
         //Variancia
-        while (j<array.count) {
-            let potencia = (array[j] - media) * (array[j] - media)
-            soma = soma + potencia
+        while (j<array.count) { //Comando para calcular a variancia
+            let potencia = (array[j] - media) * (array[j] - media) //Calcula a potencia
+            soma = soma + potencia //Pega o valor da soma das potencias
             j++
         }
-        variancia = soma / tamanhodovetor
-        varianciaLabel.text = String (variancia)
+        variancia = soma / tamanhodovetor //Divide pela quantidade de numeros no conjunto
+        varianciaLabel.text = String (variancia) // Variancia aparece no app
         
-        j=0
+        j=0 //Zerar o j para alocar mais dados
         
         //Par ou impar
-        var par = 0
-        var impar = 0
-        while (j<array.count){
-            if (array[j] % 2 == 0){
+        var par = 0 //Declara par
+        var impar = 0 //Declara impar
+        
+        while (j<array.count){ //Comando para contar os pares e impares do conjunto
+            if (array[j] % 2 == 0){ //Ve se o resto da divisão é zero
                 par = par + 1
-            } else {
+            } else { //Caso contrario é um numero impar
                 impar = impar + 1
             }
             j++
         }
-        piLabel.text = "\(par)/\(impar)"
+        piLabel.text = "\(par)/\(impar)" // Par e impar aparece no app
         
         //Desvio Padrão
-        let desviopadrao = sqrt(variancia)
-        desvioLabel.text = String (desviopadrao)
+        let desviopadrao = sqrt(variancia) //Declara desvio padrao que é a raiz quadrada da variancia
+        desvioLabel.text = String (desviopadrao) //Variancia aparece na tela
         
         
         //Moda
-        var frequency: [Float:Float] = [:]
-        for x in array {
+        var frequency: [Float:Float] = [:] //Declara frequencia
+        for x in array { //Funcao pra ver quantos numeros se repetem
             frequency[x] = (frequency[x] ?? 0) + 1
         }
-        let moda = frequency.sort { $0.1 > $1.1 }
-        modaLabel.text = String (moda)
+        let moda = frequency.sort { $0.1 > $1.1 } //Pega o valor que mais se repete e quantidade de vezes
+        modaLabel.text = String (moda) //Moda aparece no app
     }
     
     //Função que calcula a média
     func calcularMedia(totaldoconjunto: Float, tamanhodovetor: Float) -> Float{
-        return totaldoconjunto/tamanhodovetor
+        return totaldoconjunto/tamanhodovetor //Calculo de media
     }
     
     //Funcao que calcula a mediana
     func calcularMediana (tamanhodovetor: Float) -> Float {
-        return tamanhodovetor/2
+        return tamanhodovetor/2 //Calculo de Mediana
     }
     
     
