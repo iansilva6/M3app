@@ -9,6 +9,7 @@
 import UIKit
 
 class CalcViewController: UIViewController {
+    //Labels da view
     @IBOutlet var numerTextField: UITextField!
     @IBOutlet var quantidadeLabel: UILabel!
     @IBOutlet var mediaLabel: UILabel!
@@ -19,6 +20,8 @@ class CalcViewController: UIViewController {
     @IBOutlet var piLabel: UILabel!
     @IBOutlet var desvioLabel: UILabel!
     @IBOutlet var modaLabel: UILabel!
+    @IBOutlet var probLabel: UILabel!
+    @IBOutlet var prob2Label: UILabel!
     
     var array: [Float] = [] //Declara o array onde vai armazenar os dados
     
@@ -77,8 +80,8 @@ class CalcViewController: UIViewController {
         j=0 //Zerar o j para alocar mais dados
         
         //Par ou impar
-        var par = 0 //Declara par
-        var impar = 0 //Declara impar
+        var par: Float = 0 //Declara par
+        var impar: Float = 0 //Declara impar
         
         while (j<array.count){ //Comando para contar os pares e impares do conjunto
             if (array[j] % 2 == 0){ //Ve se o resto da divisão é zero
@@ -90,9 +93,19 @@ class CalcViewController: UIViewController {
         }
         piLabel.text = "\(par)/\(impar)" // Par e impar aparece no app
         
+        //Probabilidade
+        var probPar: Float = 0 //Variavel pra armazenar
+        var probImpar: Float = 0 //Variavel pra armazenar
+        
+        probPar = (par / tamanhodovetor)*100 //Calculo da probabilidade
+        probImpar = (impar / tamanhodovetor)*100 //Calculo da probabilidade
+        
+        probLabel.text = String ("\(probPar)%") //Mostra a prob. de numeros pares no app
+        prob2Label.text = String ("\(probImpar)%") //Mostra a prob. de numeros impares no app
+        
         //Desvio Padrão
         let desviopadrao = sqrt(variancia) //Declara desvio padrao que é a raiz quadrada da variancia
-        desvioLabel.text = String (desviopadrao) //Variancia aparece na tela
+        desvioLabel.text = String (desviopadrao) //Desvio padrão aparece na tela
         
         
         //Moda
